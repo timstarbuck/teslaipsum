@@ -4,6 +4,10 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;    
 }
 
 a {
@@ -14,3 +18,116 @@ a {
 * {
   box-sizing: border-box;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+  font-weight: 700;
+  line-height: 1.75em;
+  margin-bottom: 1em;
+}
+
+input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.button {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-o-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out;
+		-o-transition: background-color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out;
+		background: #002569;
+		border-radius: 40px;
+		border: 0;
+		color: white;
+		cursor: pointer;
+		display: inline-block;
+		padding: 0.80em 2em;
+		text-align: center;
+		text-decoration: none;
+		font-size: 1.4em;
+		font-weight: 600;
+		min-width: 10em;
+	}
+
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		input[type="button"]:hover,
+		.button:hover {
+			background-color: #00379C;
+		}
+
+		input[type="submit"].fit,
+		input[type="reset"].fit,
+		input[type="button"].fit,
+		.button.fit {
+			width: 100%;
+		}
+
+		input[type="submit"].small,
+		input[type="reset"].small,
+		input[type="button"].small,
+		.button.small {
+			font-size: 0.7em;
+		}
+		input[type="text"],
+		input[type="password"],
+		input[type="email"],
+		textarea {
+			-moz-appearance: none;
+			-webkit-appearance: none;
+			-o-appearance: none;
+			-ms-appearance: none;
+			appearance: none;
+			background: none;
+			border: solid 1px #888888;
+			color: inherit;
+			display: block;
+			outline: 0;
+			padding: 0.75em;
+			text-decoration: none;
+			width: 100%;
+		}
+	
+			input[type="text"]:focus,
+			input[type="password"]:focus,
+			input[type="email"]:focus,
+			textarea:focus {
+				border-color: #002569;
+			}
+	
+		input[type="text"],
+		input[type="password"],
+		input[type="email"] {
+			line-height: 1em;
+		}
+	
+		::-webkit-input-placeholder {
+			color: inherit;
+			opacity: 0.5;
+			position: relative;
+			top: 3px;
+		}
+	
+		:-moz-placeholder {
+			color: inherit;
+			opacity: 0.5;
+		}
+	
+		::-moz-placeholder {
+			color: inherit;
+			opacity: 0.5;
+		}
+	
+		:-ms-input-placeholder {
+			color: inherit;
+			opacity: 0.5;
+		}
+	
+		.formerize-placeholder {
+			color: rgba(85, 85, 85, 0.5) !important;
+		}
