@@ -16,17 +16,12 @@ export default function Home() {
     return (Math.floor(Math.random() * Math.floor(max)));
   }
   const generate = e => {
-    console.log(values);
-    // 4 sentences per paragraph? random 3 - 5?
-    // how many words per sentence? random 5 - 10?
+  
     let paragraphs = [];
     for (let i = 0; i < values.count; i++) {
       let paragraph = "";
       const sentences = getRandomInt(10);
       sentences = sentences < 3 ? 3: sentences;
-      
-      console.log('Sentences ' + sentences);
-      
       
       for (let s = 0; s < sentences; s++) {
         if (values.includeQuotes && getRandomInt(10) < 3) {
@@ -45,15 +40,15 @@ export default function Home() {
           paragraph += sentence;
         }
       }
-      
-      
       paragraphs[i] = paragraph;
     }
+    if (paragraphs.length > 0) {
+      paragraphs[0] = "Lorem ipsum " + paragraphs[0];
+    }
     setParagraphs(paragraphs);
-    console.log(paragraphs);
+
   }
-  
-  
+   
 
   useEffect(() => {
     fetch("/ipsum.json")
@@ -65,7 +60,7 @@ export default function Home() {
     })
   } , [])
 
-  console.log(ipsumDat);
+  
   if (hasError) {
     return <div>
       Oh Snap! Something unexpected happened. Please try again;
