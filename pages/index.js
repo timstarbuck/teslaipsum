@@ -31,7 +31,6 @@ export default function Home() {
           let sentence = "";
           let words = getRandomInt(10);
           words = words < 5 ? 5 : words;
-          console.log("Words: " + words);
           for(let w = 0; w < words; w++){
             sentence += ipsumDat.words[getRandomInt(ipsumDat.words.length)]
             sentence += " ";
