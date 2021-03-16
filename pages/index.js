@@ -77,7 +77,7 @@ export default function Home() {
       <div className={styles.content}>
 
       <header className={styles.header} role="img" aria-label="Tesla Model 3 Cars"> 
-        <h1><a href="#" id="logo">Tesla Ipsum</a></h1>
+        <h1><a href="#" id="logo">TESLA IPSUM</a></h1>
       </header>
       
       <div className={styles.main}>
